@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Smedicall</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css" rel="stylesheet"/>
+	<link href="https://cdn.datatables.net/1.10.15/css/dataTables.semanticui.min.css"/>
+	<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+  	<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+  	<script src="https://cdn.datatables.net/1.10.15/js/dataTables.semanticui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.js"></script>
+</head>
+<body>
+	<section style="margin:20px">
+		<h1>Patients Information</h1>
+		<div>
+			<table id="example" class="ui celled table" cellspacing="0" width="100%">
+		        <thead>
+		        	<tr>
+		                <th>Noms</th>
+		                <th>Telephone</th>
+		                <th>Raisons de la visite</th>
+		                <th>prescriptions</th>
+		                <th>Date de la consultation (J)</th>
+		                <th>Date de suivie (J+1)</th>
+		                <th>Date du prochain rendez-vous</th>
+		            </tr>
+		        </thead>
+		        <tfoot>
+		            <tr>
+		                <th>Noms</th>
+		                <th>Telephone</th>
+		                <th>Raisons de la visite</th>
+		                <th>prescriptions</th>
+		                <th>Date de la consultation (J)</th>
+		                <th>Date de suivie (J+1)</th>
+		                <th>Date du prochain rendez-vous</th>
+		            </tr>
+		        </tfoot>
+		        <tbody>
+		        <% for(var i=0; i < data.length; i++) { %>
+		        	<% var date=new Date(data[i].rdv); %>
+		        	<% date.setDate(date.getDate() + 1); %>
+		            <tr>
+		                <td><%= data[i].noms %></td>
+		                <td><%= data[i].tel %></td>
+		                <td><%= data[i].raison %></td>
+		                <td><%= data[i].pres %></td>
+		                <td><%= data[i].cons %></td>
+		                <td><%= data[i].suivie %></td>
+		                <td><%= date %></td>
+		            </tr>
+		        <% } %>
+		        </tbody>
+		    </table>		
+		</div>
+	</section>	
+	<script type="text/javascript">
+		$(document).ready(function() {
+		    $('#example').DataTable();
+		} );
+	</script>
+</body>
+</html>

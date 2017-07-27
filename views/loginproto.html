@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Smedicall</title>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/stylesheet.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<h1>Welcome</h1>
+      <section>
+  			<form class="form" action="/h_login" method="post">
+  				<input type="text" name="username" placeholder="Username"><br>
+  				<input type="password" name="password" placeholder="Password"><br>
+  				<button type="submit" id="login-button">Login</button>
+  			</form>
+      </section>
+
+      <section>
+        <form class="form" action="/cc_login" method="post">
+          <input type="text" name="username" placeholder="Username"><br>
+          <input type="password" name="password" placeholder="Password"><br>
+          <button type="submit" id="login-button">Login</button>
+        </form>
+      </section>
+		</div>
+		
+		<ul class="bg-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		$("#login-button").click(function(event){
+		 event.preventDefault();
+	 
+			 $('form').fadeOut(500);
+			 $('.wrapper').addClass('form-success');
+		});
+	</script>
+</body>

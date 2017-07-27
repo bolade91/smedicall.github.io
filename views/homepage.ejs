@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Smedicall</title>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/stylesheet.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <style>
+  	@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+	/** 
+	 * Colors 
+	 */
+	/** 
+	 * Units 
+	 */
+	[class*="entypo-"]:before {
+	  font-family: 'entypo', sans-serif;
+	  color: white;
+	  margin: 0.3em;
+	}
+
+	body, html {
+	  background: #50a3a2;
+	  color: white;
+	  font-size: 1em;
+	  font-family: 'Open sans', sans-serif;
+	  margin: 0;
+	}
+	
+	header {
+	  font-size: 1.3em;
+	  border-bottom: 0.05em solid white;
+	  height: 1.5em;
+	  clear: both;
+	  margin: 0.5em 0;
+	}
+
+	header div {
+	  float: right;
+	  display: inline-block;
+	}
+
+	a {
+	  text-decoration: none;
+	  color: inherit;
+	}
+
+	div.login {
+	  margin: 0 0.5em;
+	  text-transform: uppercase;
+	}
+
+	.loginbutton {
+	  width: 8.2em;
+	  padding: 1em;
+	  text-align: center;
+	  height: 3.6em;
+	  margin: 4.9em auto;
+	  background: #008B8B;
+	  cursor: pointer;
+	  transition: 1s ease-in-out;
+	}
+  </style>	
+</head>
+<body>
+	<header>
+	  <div class="login"><a rel="nofollow" rel="noreferrer" href="/home">Login</a></div>
+	  <div class="entypo-light-up"></div>
+	  <div class="entypo-pencil"></div>  
+	</header>
+	<div id="h" class="loginbutton">HOSPITAL</div>
+	<div id="cc" class="loginbutton">CALLCENTER</div>
+	<script type="text/javascript">
+		$("#h").click(function(event){
+		  document.location.href = "/home/h_login";
+		});
+		$("#cc").click(function(event){
+		  document.location.href = "/home/cc_login";
+		});
+	</script>
+</body>
