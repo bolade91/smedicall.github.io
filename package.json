@@ -4,7 +4,8 @@
   "description": "Suivie medical",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +14,12 @@
     "ejs": "^2.5.6",
     "express": "^4.15.3",
     "mysql": "^2.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git.heroku.com/remembrance-leaf-20424.git"
+  },
+  "engines": {
+    "node": "6.11.0"
   }
 }
